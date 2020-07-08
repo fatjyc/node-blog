@@ -1,11 +1,7 @@
-import * as express from 'express';
+import "dotenv/config";
+import Server from "./server";
+import HelloController from "./controllers/hello.controller";
 
-const app: express.Application = express();
+const server = new Server([new HelloController()]);
 
-app.get('/', (_, res) => {
-    res.send('Hello');
-});
-
-app.listen(9293, () => {
-    console.log('Server is running in port: 9293');
-});
+server.listen();
