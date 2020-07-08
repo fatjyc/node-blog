@@ -1,8 +1,8 @@
-import { Router, Request, Response } from "express";
-import Controller from "../interfaces/controller.interface";
+import { Router, Request, Response } from 'express';
+import Controller from '../interfaces/controller.interface';
 
 class HelloController implements Controller {
-  public path = "/hello";
+  public path = '/hello';
   public router = Router();
 
   constructor() {
@@ -14,7 +14,7 @@ class HelloController implements Controller {
   }
 
   private print = async (_request: Request, response: Response) => {
-    response.send("hello");
+    response.send('hello');
   };
 }
 
